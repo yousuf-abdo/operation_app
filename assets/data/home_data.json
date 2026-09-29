@@ -1,0 +1,12 @@
+{
+  "offers": [
+    { "imageUrl": "assets/images/logo.png" },
+    { "imageUrl": "assets/images/logo.png" },
+    { "imageUrl": "assets/images/logo.png"}
+  ],
+  "services": [
+    { "name": "توصيل طعام", "iconUrl": "assets/images/logo.png" },
+    { "name": "بقالة", "iconUrl": "https://via.placeholder.com/100?text=🛒" },
+    { "name": "شحن طرود", "iconUrl": "https://via.placeholder.com/100?text=📦" }
+  ]
+}
