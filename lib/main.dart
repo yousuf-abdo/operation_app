@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:operation_app/features/home/view/home.dart';
 import 'package:operation_app/features/login/view/login.dart';
+import 'package:operation_app/features/flight_depature/view/flight_depature.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,11 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routeName: (_) => const LoginScreen(),
         HomeScreen.routeName: (_) => const HomeScreen(),
+        FlightDepature.routeName: (context) {
+          final airlineId = ModalRoute.of(context)!.settings.arguments as int;
+
+          return FlightDepature(airlineId: airlineId);
+        },
       },
     );
   }

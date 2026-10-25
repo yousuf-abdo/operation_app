@@ -4,7 +4,7 @@ import 'package:operation_app/core/functaions/secure_storage.dart';
 
 class ApiClient {
   // static const String baseUrl = 'http://10.73.136.183:5137/api';
-  static const String baseUrl = 'http://localhost:5137/api';
+  static const String baseUrl = 'http://172.16.116.3:2610/api';
 
   // دالة مساعدة لبناء الترويسات
   static Future<Map<String, String>> _buildHeaders(bool authenticated) async {

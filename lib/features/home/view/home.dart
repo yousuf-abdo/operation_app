@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:operation_app/core/colors/app_colors.dart';
 import 'package:operation_app/features/home/cubit/home_cubit.dart';
 import 'package:operation_app/features/home/view/home_content.dart';
+import 'package:operation_app/features/flight_depature/view/flight_depature.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = 'home';
@@ -11,6 +12,7 @@ class HomeScreen extends StatelessWidget {
 
   final List<Widget> _pages = const [
     HomeContent(), // 0: الرئيسية
+    FlightDepature(airlineId: 107), // 1: المغادره
   ];
 
   @override
@@ -76,21 +78,27 @@ class HomeScreen extends StatelessWidget {
                   _buildBottomItem(
                     context: context,
                     index: 1,
-                    icon: Icons.receipt_long_rounded,
-                    label: "الفواتير",
+                    icon: Icons.flight_rounded,
+                    label: "رحلات اليوم",
                   ),
                   _buildBottomItem(
                     context: context,
                     index: 2,
-                    icon: Icons.inventory_2_rounded,
-                    label: "المخزن",
+                    icon: Icons.flight_takeoff_rounded,
+                    label: "المغادره",
                   ),
                   _buildBottomItem(
                     context: context,
                     index: 3,
-                    icon: Icons.account_balance_rounded,
-                    label: "الصندوق",
+                    icon: Icons.flight_land_rounded,
+                    label: "الوصول",
                   ),
+                  // _buildBottomItem(
+                  //   context: context,
+                  //   index: 3,
+                  //   icon: Icons.account_balance_rounded,
+                  //   label: "الصندوق",
+                  // ),
                 ],
               ),
             ),
